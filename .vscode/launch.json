@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug STLink-V3",
+      "cwd": "${workspaceRoot}",
+      "type": "cortex-debug",
+      "executable": "${command:cmake.launchTargetPath}",
+      "request": "launch",
+      "servertype": "stlink",
+      "device": "STM32F303RE",
+      "interface": "swd",
+      "serialNumber": "",
+      "runToEntryPoint": "main",
+      "svdFile": "STM32F303.svd",
+      "v1": false,
+      "showDevDebugOutput": "both"
+    },
+    {
+      "name": "Debug OpenOCD",
+      "request": "launch",
+      "type": "cortex-debug",
+      "cwd": "${workspaceRoot}",
+      "preLaunchTask": "Build project",
+      "servertype": "openocd",
+      "showDevDebugOutput": "raw",
+      "executable": "${command:cmake.launchTargetPath}",
+      "device": "STM32F303RE",
+      "svdFile": "STM32F303.svd",
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32f3x.cfg"
+      ]
+    },
+  ]
+}

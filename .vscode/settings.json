@@ -1,0 +1,11 @@
+{
+  "cortex-debug.openocdPath": "/usr/bin/openocd",
+  "cortex-debug.armToolchainPath": "/usr/bin",
+  "cortex-debug.gdbPath": "/usr/bin/gdb-multiarch",
+  "cortex-debug.variableUseNaturalFormat": false,
+  "files.associations": {
+    "stm32f303xe.h": "c",
+    "stm32f3xx.h": "c",
+    "iostream": "cpp"
+  },
+}
